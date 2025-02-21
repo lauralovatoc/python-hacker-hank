@@ -1,0 +1,52 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'reverse_words_order_and_swap_cases' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING sentence as parameter.
+#
+
+def reverse_words_order_and_swap_cases(sentence):
+    mylist = sentence.split()
+      
+    tam = len(mylist)
+    invert = []
+    
+    if tam==1:
+        invert.append(mylist[0])
+    
+    else:
+        for i in range(tam-1):
+        
+            if not mylist:
+                exit()  
+        
+            invert.append(mylist[-1])
+            mylist.pop(-1)
+        
+            if i == tam-2:
+                invert.append(mylist[0])
+    
+    result = " ".join(invert)
+    result = result.swapcase()
+    return(str(result))
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    sentence = input()
+
+    result = reverse_words_order_and_swap_cases(sentence)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
