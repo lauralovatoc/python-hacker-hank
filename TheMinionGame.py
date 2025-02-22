@@ -1,5 +1,4 @@
-##não terminei, dos 13 testes, 3 deles deram erro de limite de tempo os demais deram certo
-## TO DO! otimizar código
+##não terminei
 
 def minion_game(string):
     result_kevin = 0
